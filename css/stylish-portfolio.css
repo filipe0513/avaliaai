@@ -362,6 +362,7 @@ hr.small {
 /* Video Modal */
 #video_img {
     cursor: pointer;
+    margin-top: 24px;
     margin-bottom: 50px;
 }
 
