@@ -266,56 +266,6 @@ a.btn-submit i {
     cursor: pointer;
 }
 
-/*.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    background-color: #000;
-    opacity: 0.75;
-}
-
-.modal {
-    z-index: 1000;
-    position: fixed; 
-    top: 50%; 
-    margin-top: -225px; 
-    left: 50%; 
-    margin-left: -400px;
-    border: 0;
-}
-
-.modal-box {
-    height: 100%;
-}
-
-#modal-x {
-    position: absolute;
-    float: right;
-    z-index: 1005;
-    width: 36px;
-    height: 35px;
-    margin: 0;
-    top: 20px;
-    right: 20px;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: 36px 35px;
-    background-image: url("../img/video-x.png");
-
-}
-.modal-content {
-    padding: 0px;
-    height: 100%;
-    border: 0 none;
-}*/
-
-
-
-
 
 
 /* Social Proof */
