@@ -33,15 +33,6 @@
 </head>
 
 <body>
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=432933893400497&version=v2.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-
   <!-- Header -->
   <header id="top" class="header">
     <div class="container">
@@ -75,9 +66,17 @@
           <div class="hero-target-container thank-you left-text ">
             <h1>Obrigado!</h1>
             <p>Nossa equipe irá entrar em contato com você o mais rápido possível.</p>
-            <div class="fb-like" data-href="https://www.facebook.com/say2me" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-            <a href="https://twitter.com/Say2meOficial" class="twitter-follow-button" data-show-count="false">Follow @Say2meOficial</a>
-
+            <ul class="list-inline">
+            <li>
+              <a href="https://facebook.com/say2me"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/say2meoficial"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+            </li>
+            <li>
+              <a href="https://instagram.com/say2meoficial"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
+            </li>
+          </ul>
           </div>
         </div>
       </div>
@@ -267,8 +266,6 @@
       }
     }
 
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-  
     /* Customer.IO */    
     var _cio = _cio || [];
     (function() {

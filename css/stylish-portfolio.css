@@ -219,8 +219,8 @@ a.btn-submit, input[type=submit] {
 
 
 /* Thank you  */
-.thank-you {
-    
+.thank-you a {
+    color: #FFFFFF;
 }
 
 
