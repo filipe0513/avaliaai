@@ -177,14 +177,17 @@ hr.small {
 }
 
 
+
+
+
 /* Call-to-action  */
 .call-to-action input {
     font-weight: 400;
     background: transparent;
     margin: 8px 0;
-    padding: 8px 12px;
-    border: 1px solid #DEEFFF;
-    color: #DEEFFF;
+    padding: 20px 12px;
+    border: 1px solid #DEDEEF;
+    color: #FFFFFF;
     border-radius: 2px;
 
     font-size: 18px; /* 16px, 14px */
@@ -192,16 +195,18 @@ hr.small {
     width: 100%;
 }
 
-.call-to-action input[type=text]:focus, .call-to-action input[type=text]:focus {
-    outline-color: #DEEFFF;
-    outline-offset: -2px;
-    outline-style: auto;
-    outline-width: 5px;
-
-    border: 1px solid #FFFFFF;
+.call-to-action ::-webkit-input-placeholder {
+    color: #DEDEEF;
+    font-style: italic; 
 }
 
-a.btn-submit, input[type=submit] {
+.form-control:focus {
+    border-color: #FFFFFF;
+    outline-color: #DEEFFF;
+}
+
+.btn-submit, input.btn-submit {
+    padding: 8px 12px;
     border: none;
     background: #e18900;
     font-family: 'Oswald';
@@ -217,6 +222,52 @@ a.btn-submit, input[type=submit] {
     border-radius: 4px;
 }
 
+.btn-submit:hover {
+    background: #CF7F00;
+}
+
+.btn-submit:active, .btn-submit:visited, .btn-submit:focus {
+    background: #e18900;
+}
+
+.btn-submit:focus {
+    outline-color: transparent;
+    outline-color: rgba(0, 0, 0, 0);
+    outline-offset: 0px;
+    outline-style: auto;
+    outline-width: 0px;
+}
+
+.completation-warning  {
+    margin: 0 auto;
+}
+
+.completation-warning p {
+    color: #876;
+    font-weight: 400;
+    font-size: 16px;
+    
+    padding: 10px;
+}
+
+/* Modal */
+.small-modal {
+    width: 400px;
+}
+
+.small-modal .modal-header {
+    background: rgb(0,143,212);
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+
+.small-modal input {
+    font-size: 16px;
+    font-weight: 300; 
+}
 
 /* Thank you  */
 .thank-you a {
@@ -231,10 +282,10 @@ a.btn-submit, input[type=submit] {
     padding: 80px 0;
 }
 
-a.btn-submit {
+.btn-submit {
     padding: 10px 35px;
 }
-a.btn-submit i {
+.btn-submit i {
     margin-right: 30px;
 } 
 
@@ -295,9 +346,10 @@ a.btn-submit i {
     width: 100px;
     height: 100px;
     margin: 10px auto 30px;
-
-    /*border-radius:  50%;*/
-    /*border: 1px solid #888888;*/
+    
+    -webkit-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
 

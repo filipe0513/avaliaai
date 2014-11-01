@@ -57,10 +57,13 @@
           <div id="call-to-action" class="hero-target-container call-to-action left-text">
             <h1>A melhor forma de coletar feedbacks dos clientes.</h1>
             <p>O Avalia.aí é um canal de comunicação que entrega feedbacks de consumidores às pessoas certas, online, em tempo real.</p>
-            <form id="form1" name="form1" action="javascript:submit_form();">
-              <input type="text" id="customer_name" title="Nome" value="Nome" onfocus="javascript:focarCampo(this);" onblur="perdeuFoco(this);" /><br>
-              <input type="email" id="customer_email" title="E-mail" value="E-mail" onfocus="javascript:focarCampo(this);" onblur="perdeuFoco(this);" /><br>
-              <input type="submit" value="Quero ouvir meus clientes agora!" />
+            <form role="form" id="form1" name="form1" action="javascript:submit_form();">
+              <div class="completation-warning text-center hidden">
+                <p class="bg-warning">Favor preencher os campos de Nome e E-mail.</p>
+              </div>
+              <input type="text"  id="customer_name" class="form-control"  placeholder="Nome">
+              <input type="email"  id="customer_email" class="form-control"  placeholder="E-mail">
+              <input type="submit" class="btn-submit" value="Quero ouvir meus clientes agora!" />
             </form>
           </div>
           <div id="thank-you" class="hero-target-container thank-you left-text hidden">
@@ -185,7 +188,33 @@
         <div class="col-lg-12 text-center">
           <h2>Você se importa com seus clientes?</h2>
           <p class="lead">Então, o que você está esperando mostrar isto pra eles? Comece a direcionar os investimentos para melhorar a satisfação dos clientes, a responder os feedbacks e a dar prêmios para fidelizar os clientes!<br><br>
-          <a href="#" class="btn-submit"><i class="fa fa-bullhorn fa-fw"></i>Quero ouvir meus clientes agora!</a>
+
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-lg btn-submit" data-toggle="modal" data-target="#myModal">
+            <i class="fa fa-bullhorn fa-fw"></i>Quero ouvir meus clientes agora!
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog small-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Cadastre-se para ouvir seus clientes!</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="completation-warning hidden">
+                    <p class="bg-warning">Favor preencher os campos de Nome e E-mail.</p>
+                    
+                  </div>  
+                  <input type="text"  id="customer_name2" class="form-control"  placeholder="Nome"><br>
+                  <input type="email"  id="customer_email2" class="form-control"  placeholder="E-mail"><br>
+                  <button onclick="javascript:submit_form2();" type="button" class="btn btn-primary btn-submit" >Começar agora!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           </p>
         </div>
         <div class="clearfix visible-xs-block"></div>
@@ -285,11 +314,48 @@
     })();
 
     function submit_form() {
+      var name = jQuery("#customer_name").val();
+      var email = jQuery("#customer_email").val(); 
+      var pressed = 'hero';
+      
+      if (name !== undefined && 
+        name != "" && 
+        email !== undefined &&
+        email != "") {
+
+        send_to_cio(pressed, name, email);
+      } else {
+        alert_incompletation();
+      }
+    }
+  
+    function submit_form2() {
+      var name = jQuery("#customer_name2").val();
+      var email = jQuery("#customer_email2").val(); 
+      var pressed = 'headline';
+      
+      if (name !== undefined && 
+        name != "" && 
+        email !== undefined &&
+        email != "") {
+
+        send_to_cio(pressed, name, email);
+        jQuery('#myModal').modal('hide');
+      } else {
+        alert_incompletation();
+      }
+    }
+
+    function alert_incompletation(){
+      jQuery('.completation-warning').removeClass('hidden');
+    }
+
+    function send_to_cio(pressed, name, email) {
       var uniqId = 'user_' + jQuery.now()
       _cio.identify({
         // Required attributes
         id: uniqId,           // Unique id for the currently signed in user in your application.
-        email:  jQuery("#customer_email").val(), // Email of the currently signed in user.
+        email:  email, // Email of the currently signed in user.
         created_at: jQuery.now(),   // Timestamp in your system that represents when
                                   // the user first signed up. You'll want to send it
                                   // as seconds since the epoch.
@@ -297,11 +363,14 @@
         // Optional (these are examples. You can name attributes what you wish)
 
         name:  jQuery("#customer_name").val(),       // Add any attributes you'd like to use in the email subject or body.
-        customer_segment: 'avaliaai'      // To use the example segments, set this to 'free' or 'premium'.
+        customer_segment: 'avaliaai',      // To use the example segments, set this to 'free' or 'premium'.
+        pressed_button: pressed      
       });
+
 
       jQuery('#thank-you').removeClass('hidden');
       jQuery('#call-to-action').addClass('hidden');
+      jQuery('.completation-warning').addClass('hidden');
 
     }
 
