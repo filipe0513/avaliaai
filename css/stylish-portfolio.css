@@ -181,7 +181,7 @@ hr.small {
 
 
 /* Call-to-action  */
-.call-to-action input {
+.call-to-action input, .transparent-btn {
     font-weight: 400;
     background: transparent;
     margin: 8px 0;
@@ -249,6 +249,18 @@ hr.small {
     
     padding: 10px;
 }
+
+.transparent-btn {
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.transparent-btn:hover {
+    border-color: #FFFFFF;
+    background: rgba(0,0,0,0.1);
+    color: #FFFFFF;
+}
+
 
 /* Modal */
 .small-modal {
