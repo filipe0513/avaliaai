@@ -333,6 +333,10 @@ hr.small {
     font-weight: 100;
 }
 
+.contact i {
+    margin-right: 10px;
+}
+
 .contact .transparent-btn {
     border: 1px solid #DEDEEF;
     background: #fafafa;
