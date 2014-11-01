@@ -54,7 +54,7 @@
           <img class="youtube img-responsive" id="video_img" src="img/video-avalia-ai.png" rel="Y9FdwpdBvVQ" alt="video avalia ai">
         </div>
         <div class="col-md-5 col-sm-5 right-left">
-          <div class="hero-target-container call-to-action left-text hidden">
+          <div id="call-to-action" class="hero-target-container call-to-action left-text">
             <h1>A melhor forma de coletar feedbacks dos clientes.</h1>
             <p>O Avalia.aí é um canal de comunicação que entrega feedbacks de consumidores às pessoas certas, online, em tempo real.</p>
             <form id="form1" name="form1" action="javascript:submit_form();">
@@ -63,20 +63,23 @@
               <input type="submit" value="Quero ouvir meus clientes agora!" />
             </form>
           </div>
-          <div class="hero-target-container thank-you left-text ">
+          <div id="thank-you" class="hero-target-container thank-you left-text hidden">
             <h1>Obrigado!</h1>
             <p>Nossa equipe irá entrar em contato com você o mais rápido possível.</p>
-            <ul class="list-inline">
-            <li>
-              <a href="https://facebook.com/say2me"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-            </li>
-            <li>
-              <a href="https://twitter.com/say2meoficial"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-            </li>
-            <li>
-              <a href="https://instagram.com/say2meoficial"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
-            </li>
-          </ul>
+            <br>
+            <div class="text-center">
+              <ul class="list-inline">
+                <li>
+                  <a href="https://facebook.com/say2me"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/say2meoficial"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                </li>
+                <li>
+                  <a href="https://instagram.com/say2meoficial"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -297,7 +300,8 @@
         customer_segment: 'avaliaai'      // To use the example segments, set this to 'free' or 'premium'.
       });
 
-      // jQuery('#form1').submit();
+      jQuery('#thank-you').removeClass('hidden');
+      jQuery('#call-to-action').addClass('hidden');
 
     }
 

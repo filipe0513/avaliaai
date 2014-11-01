@@ -272,6 +272,7 @@ a.btn-submit i {
 /* Video Modal */
 #video_img {
     cursor: pointer;
+    margin-bottom: 50px;
 }
 
 
@@ -346,30 +347,7 @@ a.btn-submit i {
 
 
 
-/* Call to Action */
-
-.call-to-action {
-    padding: 50px 0;
-}
-
-.call-to-action .btn {
-    margin: 10px;
-}
-
-
-
-
-
-
-
 /* Footer */
-
-footer .varejao-logo {
-    background-size:  187px 88px;
-    width: 226px;
-    height: 88px;
-    margin-bottom: 10px;
-}
 
 footer h4 {
     font-size: 16px;
