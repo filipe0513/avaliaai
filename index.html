@@ -44,14 +44,14 @@
         </div>
         <div class="text-right col-md-3 col-md-offset-6">
           <ul class="list-inline text-uppercase menu-links">
-            <li><a href="#">Fale conosco</a></li>
-            <li><a href="#">Saiba mais</a></li>
+            <li><a href="/contato">Fale conosco</a></li>
           </ul>
         </div>
       </div>
       <div class="row">
         <div class="col-md-7 col-sm-7 text-center">
           <img class="youtube img-responsive" id="video_img" src="img/video-avalia-ai.png" rel="Y9FdwpdBvVQ" alt="video avalia ai">
+          <!-- <img class="youtube img-responsive" id="video_img" src="img/ebook.png" rel="Y9FdwpdBvVQ" alt="video avalia ai"> -->
         </div>
         <div class="col-md-5 col-sm-5 right-left">
           <div id="call-to-action" class="hero-target-container call-to-action left-text">
@@ -287,19 +287,6 @@
       $(".youtube").YouTubeModal({autoplay:1, width:800, height:450});
     });
       
-    function focarCampo(element){
-      if (element.value == element.title) {
-        element.value = "";
-      }
-      element.focus();
-    }
-
-    function perdeuFoco(element){
-      if(element.value == ""){
-        element.value = element.title;
-      }
-    }
-
     /* Customer.IO */    
     var _cio = _cio || [];
     (function() {
@@ -355,25 +342,17 @@
     function send_to_cio(pressed, name, email) {
       var uniqId = 'user_' + jQuery.now()
       _cio.identify({
-        // Required attributes
-        id: uniqId,           // Unique id for the currently signed in user in your application.
-        email:  email, // Email of the currently signed in user.
-        created_at: jQuery.now(),   // Timestamp in your system that represents when
-                                  // the user first signed up. You'll want to send it
-                                  // as seconds since the epoch.
-
-        // Optional (these are examples. You can name attributes what you wish)
-
-        name:  jQuery("#customer_name").val(),       // Add any attributes you'd like to use in the email subject or body.
-        customer_segment: 'avaliaai',      // To use the example segments, set this to 'free' or 'premium'.
+        id: uniqId,    
+        email:  email, 
+        created_at: jQuery.now(),   
+        name:  jQuery("#customer_name").val(),       
+        customer_segment: 'avaliaai',      
         pressed_button: pressed      
       });
-
 
       jQuery('#thank-you').removeClass('hidden');
       jQuery('#call-to-action').addClass('hidden');
       jQuery('.completation-warning').addClass('hidden');
-
     }
 
     function reactivateForm(){

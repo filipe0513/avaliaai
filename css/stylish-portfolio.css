@@ -128,6 +128,10 @@ hr.small {
     background-size: cover;
 }
 
+.header.contact {
+    height: auto;
+}
+
 .header ul.menu-links {
     margin: 30px 0;
 }
@@ -197,7 +201,6 @@ hr.small {
 
 .call-to-action ::-webkit-input-placeholder {
     color: #DEDEEF;
-    font-style: italic; 
 }
 
 .form-control:focus {
@@ -326,10 +329,30 @@ hr.small {
     /*color: #454545;*/
 }
 
+.contact h2 small {
+    font-weight: 100;
+}
 
+.contact .transparent-btn {
+    border: 1px solid #DEDEEF;
+    background: #fafafa;
+    color: #333333;
+    margin-top: 20px;
+}
 
+.contact .transparent-btn:hover {
+    border: 1px solid #cdcddd;
+    background: #efefef;
+    color: #1C1C1C;
+}
 
+.contact-footer {
+    padding-top: 0;
+}
 
+.contact-footer address {
+    margin-top: 100px;
+}
 
 
 /* Video Modal */
@@ -355,12 +378,8 @@ hr.small {
 }
 
 .social-proof .profile-img {
-    width: 100px;
+    width: 125px;
     margin: 10px auto 30px;
-    
-    -webkit-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%);
 }
 
 
@@ -379,7 +398,7 @@ hr.small {
     margin: 100px 0;
 }
 
-.how-it-works .no-margin-top {
+.no-margin-top {
     margin-top: 0px;
 }
 
