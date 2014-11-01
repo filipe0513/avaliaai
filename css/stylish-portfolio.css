@@ -1,0 +1,465 @@
+/*!
+ * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 100;
+    color: #888;
+}
+
+section {
+    padding: 100px 0;
+}
+
+a {
+    font-weight: 700;
+    color: rgb(0,143,212);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 300;
+    color: #1C1C1C;
+}
+
+p {
+    font-size: 16px;
+}
+
+p.lead {
+    font-size: 21px;
+    font-weight: 100;
+}
+
+
+
+
+
+/* Custom Button Styles */
+
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.btn-light {
+    border-radius: 0;
+    color: #333;
+    background-color: rgb(255,255,255);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+
+
+
+
+
+
+
+
+/* Custom Horizontal Rule */
+
+hr.small {
+    max-width: 200px;
+}
+
+
+
+
+
+
+
+
+
+/* Header */
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    color: #FFFFFF;
+    background-color: rgb(0,143,212);
+
+    -webkit-background: radial-gradient(#00b5ec, #008fd4)  300px 10px;
+    background: radial-gradient(#00b5ec, #008fd4)  300px 10px;
+    
+    background-size: cover;
+}
+
+.header ul.menu-links {
+    margin: 30px 0;
+}
+
+.header ul.menu-links li a{
+    font-weight: 100; 
+    color: #ffffff;
+}
+
+.avalia-ai-logo {
+    float: left;
+    /*background: url('../img/avalia-ai-logo.png') center center no-repeat;*/
+}
+
+.header .avalia-ai-logo img {
+    width: 204px;
+    height: 41.5px;
+
+    margin: 20px 0;
+}
+
+.call-to-action-container {
+    margin-bottom: 50px;
+    padding: 25px 30px 30px 30px;
+
+    background-color: rgba(0,0,0,0.1); 
+
+    font-size: 21px;
+}
+
+.call-to-action-container h1, p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.2em;
+}
+
+.call-to-action-container h1 {
+    font-family: 'Oswald';
+    font-size: 36px; /* 30, 24*/
+}
+
+.call-to-action-container p {
+    font-size: 21px; /* 18, 15*/
+}
+
+.call-to-action-container input {
+    font-weight: 400;
+    background: transparent;
+    margin: 8px 0;
+    padding: 8px 12px;
+    border: 1px solid #DEEFFF;
+    color: #DEEFFF;
+    border-radius: 2px;
+
+    font-size: 18px; /* 16px, 14px */
+
+    width: 100%;
+}
+
+.call-to-action-container input:focus {
+    outline-color: #DEEFFF;
+    outline-offset: -2px;
+    outline-style: auto;
+    outline-width: 5px;
+
+    border: 1px solid #FFFFFF;
+}
+
+a.btn-submit, input[type=submit] {
+    border: none;
+    background: #e18900;
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-size: 21px; /* 18px, 16px */
+    
+    color: #FFFFFF;
+    text-transform: uppercase;
+    
+    -webkit-box-shadow: 0 0 4px 0 #925900;
+    box-shadow: 0 4px 0 #925900;
+
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+/* Standard Headlines */
+.std-headline {
+    padding: 80px 0;
+}
+
+a.btn-submit {
+    padding: 10px 35px;
+}
+a.btn-submit i {
+    margin-right: 30px;
+} 
+
+.bg-primary {
+    background: rgb(0,143,212);
+}
+
+.bg-primary h2 {
+    color: #FFFFFF;
+}
+
+/*.bg-primary a {
+    color: #F6C700;
+}*/
+
+.bg-secondary {
+    background: #EAEFF2;
+    color: #555555;
+}
+
+.bg-secondary h2 {
+    color: #555555;
+}
+
+.bg-secondary a {
+    /*color: #454545;*/
+}
+
+
+
+
+
+
+
+/* Video Modal */
+#video_img {
+    cursor: pointer;
+}
+
+/*.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: #000;
+    opacity: 0.75;
+}
+
+.modal {
+    z-index: 1000;
+    position: fixed; 
+    top: 50%; 
+    margin-top: -225px; 
+    left: 50%; 
+    margin-left: -400px;
+    border: 0;
+}
+
+.modal-box {
+    height: 100%;
+}
+
+#modal-x {
+    position: absolute;
+    float: right;
+    z-index: 1005;
+    width: 36px;
+    height: 35px;
+    margin: 0;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 36px 35px;
+    background-image: url("../img/video-x.png");
+
+}
+.modal-content {
+    padding: 0px;
+    height: 100%;
+    border: 0 none;
+}*/
+
+
+
+
+
+
+/* Social Proof */
+
+.social-proof .fa-quote-left, .social-proof .fa-quote-right {
+    color: rgb(0,143,212);
+}
+
+.social-proof .fa-quote-left {
+    margin-right: 10px;
+}
+
+.social-proof .fa-quote-right {
+    margin-left: 10px;
+}
+
+.social-proof .profile-img {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto 30px;
+
+    /*border-radius:  50%;*/
+    /*border: 1px solid #888888;*/
+}
+
+
+
+
+
+
+
+/* How It Works */
+
+.how-it-works {
+    padding-bottom: 0;
+}
+
+.how-it-works hr {
+    margin: 100px 0;
+}
+
+.how-it-works .no-margin-top {
+    margin-top: 0px;
+}
+
+.how-it-works ul.bullet-points {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.how-it-works ul.bullet-points li {
+    margin-top: 30px;
+}
+
+.how-it-works ul.bullet-points li i {
+    margin-right: 10px;
+}
+
+.how-it-works img.cell {
+    max-width: 281px;
+    margin: 0 auto;
+}
+
+.how-it-works img.computer {
+    margin-top: 26px;
+}
+
+
+
+
+
+
+/* Call to Action */
+
+.call-to-action {
+    padding: 50px 0;
+}
+
+.call-to-action .btn {
+    margin: 10px;
+}
+
+
+
+
+
+
+
+/* Footer */
+
+footer .varejao-logo {
+    background-size:  187px 88px;
+    width: 226px;
+    height: 88px;
+    margin-bottom: 10px;
+}
+
+footer h4 {
+    font-size: 16px;
+}
+
+
+
+
+
+
+/* Media queries */
+
+@media(max-width:768px) {
+    .map {
+        height: 75%;
+    }
+}
+
+@media(max-width:600px) {
+    .text-vertical-center h1 {
+        font-size: 3.5em;
+    }
+    h3, .h3 {
+        font-size: 20px;
+    }
+    .header .varejao-logo {
+        background-size:  224px 105px;
+        width: 258px;
+        height: 105px;
+    }
+
+    .map {
+        height: 50%;
+    }
+}
+
+@media(max-width:480px) {
+    .text-vertical-center h1 {
+        font-size: 3em;
+    }
+
+    .map {
+        height: 25%;
+    }
+}
+
+/* Footer */
+
+footer {
+    padding: 100px 0;
+}
