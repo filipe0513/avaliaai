@@ -149,7 +149,10 @@ hr.small {
     margin: 20px 0;
 }
 
-.call-to-action-container {
+
+
+/* Hero target Container */
+.hero-target-container {
     margin-bottom: 50px;
     padding: 25px 30px 30px 30px;
 
@@ -158,22 +161,24 @@ hr.small {
     font-size: 21px;
 }
 
-.call-to-action-container h1, p {
+.hero-target-container h1, p {
     margin-top: 0;
     margin-bottom: 20px;
     line-height: 1.2em;
 }
 
-.call-to-action-container h1 {
+.hero-target-container h1 {
     font-family: 'Oswald';
     font-size: 36px; /* 30, 24*/
 }
 
-.call-to-action-container p {
+.hero-target-container p {
     font-size: 21px; /* 18, 15*/
 }
 
-.call-to-action-container input {
+
+/* Call-to-action  */
+.call-to-action input {
     font-weight: 400;
     background: transparent;
     margin: 8px 0;
@@ -187,7 +192,7 @@ hr.small {
     width: 100%;
 }
 
-.call-to-action-container input:focus {
+.call-to-action input[type=text]:focus, .call-to-action input[type=text]:focus {
     outline-color: #DEEFFF;
     outline-offset: -2px;
     outline-style: auto;
@@ -213,7 +218,10 @@ a.btn-submit, input[type=submit] {
 }
 
 
-
+/* Thank you  */
+.thank-you {
+    
+}
 
 
 
