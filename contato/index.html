@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Avalia.aí">
-  <meta name="description" content="DESCRIPTION">
-  <meta name="keywords" content="KEY WORDS">
+  <meta name="description" content="O Avalia.aí é um canal de comunicação que entrega feedbacks de clientes às pessoas certas, online, em tempo real. Agora ficou fácil analisar a satisfação dos clientes, fidelizar os clientes, descobrir onde e como melhorar seu negócio, e aumentar seu faturamento.">
+  <meta name="keywords" content="pesquisa online, pesquisa satisfação, satisfação cliente, avaliação satisfação, pesquisa de satisfação para restaurante, pesquisa de satisfação online, pesquisa de satisfação para hotel, pesquisa de satisfação para curso, pesquisa de satisfação para loja">
 
-  <title>Fale conosco - Avalia.aí - a melhor maneira de receber e analisar feedbacks dos consumidores</title>
+  <title>Fale conosco - Avalia.aí - a melhor maneira de receber e analisar feedbacks dos clientes</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@
         </div>
         <div class="text-right col-md-3 col-md-offset-6">
           <ul class="list-inline text-uppercase menu-links">
-            <li><a href="/avaliaai">Início</a></li>
+            <li><a href="/">Início</a></li>
           </ul>
         </div>
       </div>
@@ -65,7 +65,9 @@
             <p class="bg-warning">Favor preencher os campos de Nome e E-mail.</p>
           </div>  
           <input type="text" class="form-control" id="customer_name3" placeholder="Nome"><br>
-          <input type="email" class="form-control" id="customer_email3" placeholder="E-mail">
+          <input type="email" class="form-control" id="customer_email3" placeholder="E-mail"><br>
+          <input type="tel" class="form-control" id="customer_phone3" placeholder="Telefone"><br>
+          <textarea class="form-control" id="customer_msg3" placeholder="Mensagem"></textarea>
           <button onclick="javascript:submit_form3();" type="submit" class="transparent-btn btn btn-default">Enviar</button>
         </div>
       </div>
@@ -175,6 +177,8 @@
         created_at: jQuery.now(),   
         name:  jQuery("#customer_name").val(),       
         customer_segment: 'avaliaai',      
+        telephone: jQuery("#customer_phone3").val(),      
+        message: jQuery("#customer_msg3").val(),      
         pressed_button: pressed      
       });
 
@@ -182,7 +186,7 @@
       jQuery('#call-to-action').addClass('hidden');
       jQuery('.completation-warning').addClass('hidden');
 
-      window.location.href = "../obrigado"
+      window.location.href = "/obrigado"
     }
 
   </script>
