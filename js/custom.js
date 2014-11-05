@@ -41,6 +41,7 @@ function submit_form() {
   } else {
     alert_incompletation();
   }
+  // window.location.href = "../index.html#"
 }
 
 function submit_form2() {
